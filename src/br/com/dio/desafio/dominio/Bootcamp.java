@@ -6,6 +6,11 @@ import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
 
+/*Classe bootcamp que terá como atributos o nome e a descrição
+O local date.now para retornar a data naquele exato momento e o localdate.plusDays, para retornar
+o valor da data em 45 dias(nesse caso)
+
+*/
 public class Bootcamp {
     private String nome;
     private String descricao;
@@ -55,6 +60,7 @@ public class Bootcamp {
         this.conteudos = conteudos;
     }
 
+    //Método equals para comparações 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -62,7 +68,7 @@ public class Bootcamp {
         Bootcamp bootcamp = (Bootcamp) o;
         return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricao, bootcamp.descricao) && Objects.equals(dataInicial, bootcamp.dataInicial) && Objects.equals(dataFinal, bootcamp.dataFinal) && Objects.equals(devsInscritos, bootcamp.devsInscritos) && Objects.equals(conteudos, bootcamp.conteudos);
     }
-
+    //Escrita do HashCode necessária junto com o equals
     @Override
     public int hashCode() {
         return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);

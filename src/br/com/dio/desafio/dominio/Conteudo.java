@@ -2,12 +2,16 @@ package br.com.dio.desafio.dominio;
 
 public abstract class Conteudo {
 
+    //Variável que nunca irá mudar, por isso o "final"
     protected static final double XP_PADRAO = 10d;
 
-    private String titulo;
-    private String descricao;
+    public String titulo;
+    public String descricao;
 
+    //Método para calcular o xp caso o aluno faça algo, algum curso por exemplo
     public abstract double calcularXp();
+
+    //Get e Set para modificar os títulos e as descrições caso for preciso
 
     public String getTitulo() {
         return titulo;
